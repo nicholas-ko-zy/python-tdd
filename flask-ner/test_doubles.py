@@ -26,7 +26,7 @@ class DocTestDouble:
         # [('Madison', 'PERSON'), ('Wisconsin', 'GPE')]
         # In our mockup, we use list comprehension to reverse engineer
         # [(ent.text, ent.label_) for ent in doc.ents]
-        self.ent = [SpanTestDouble(ent['test'], ent['label_']) for ent in ents]
+        self.ents = [SpanTestDouble(ent['text'], ent['label_']) for ent in ents]
 
     # optional patch_method
     def patch_method(self, attr, return_value):

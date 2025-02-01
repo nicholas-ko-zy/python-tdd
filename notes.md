@@ -92,4 +92,11 @@ pytest test/test_ner_client.py::TestNerClient::test_get_ents_returns_dictionary_
 ```
 ^ Hint: You can use tab completion along the way. Remember to use the double-colons `::` after the `.py` file. First `::` to specify the class name and the second one to specify the test name.
 
-(Stopped at 38:40)
+## Lesson: Running single test cases
+
+Find a unique substring to replace `"substring"` and run this in your terminal.
+```
+pytest -k "substring"
+```
+
+
