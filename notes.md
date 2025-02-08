@@ -99,4 +99,6 @@ Find a unique substring to replace `"substring"` and run this in your terminal.
 pytest -k "substring"
 ```
 
+Stopped at 1:11:02
+
 

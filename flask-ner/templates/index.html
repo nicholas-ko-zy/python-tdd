@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Named Entity Finder</head></html</title>
+    </head>
+    <body>
+        <!-- create a data test id to test (in test_index_e2e.py) 
+            for the presence of this tag, in case the 
+            front-end engineer changes it -->
+        <h1 id='heading' 
+        data-test-id='heading'>
+        Named Entity Finder
+        </h1>
+        <input id="input-text" data-test-id="input-text" class="form-control">
+        <button class="btn btn-outline-primary" type="button" id="find-button" data-test-id="find-button">
+        </button>
+        <table id="ner-table" data-test-id="ner-table" class="table table-bordered">
+            <thead class="thead dark">
+                <tr>
+                    <th>Entity</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+ 
+            </tbody>
+        </table>
+    </body>
+</html>
