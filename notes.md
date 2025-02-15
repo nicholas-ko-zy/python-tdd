@@ -99,6 +99,58 @@ Find a unique substring to replace `"substring"` and run this in your terminal.
 pytest -k "substring"
 ```
 
-Stopped at 1:11:02
+# Lesson: You have to run app.py before running your `test_index_e2e.py` file
+Run this then run your end-to-end test, so that you have the flask app running.
+
+```
+python3 app.py
+```
+
+# Summary of tests done
+- unit test 
+- e2e browser automation test
+- integration test on the API
+
+# Random
+## Automatically installing the packages used in the project
+^Provided the project doesn't have a requirements file...
+I think that's what requirement files do....
+
+1. Install helper package
+```
+pip install pipreqs
+```
+2. Scan through project to look for packages, outputs `requirements.txt`
+```
+pipreqs --ignore bin,etc,include,lib,lib64
+```
+
+3. Install required packages using `requirements.txt` file.
+```
+pip install -r requirements.txt
+```
+# Lesson: I git cloned Wes Doyle's project from github but it didn't work out of the box.
+
+I asked ChatGPT for help, here's what I've found
+
+- I had to create a new environment and check that I have all the
+packages in needed installed. To do so, follow the lessons above.
+- After that you need to run `pip install -e .` in your terminal.
+- I tried running `app.py` again and found the front-end was not working. ChatGPT's advice was to check the console in the web browser which was hosting the app.
+
+This was what I saw:
+
+![frontend not updating error](screenshot_img/flask_ner_front_end_not_updating_console_log.png)
+
+So I did
+
+- `pip install flask-cors`
+- Added this to the top of `app.js`
+```python
+from flask_cors import CORS  # Import CORS
+```
+
+
+
 
 
